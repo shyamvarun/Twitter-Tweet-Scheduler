@@ -2,8 +2,8 @@ name: Tweet Prabhas Countdown
 
 on:
   schedule:
-    # Runs every day at 12:30 PM UTC (6:00 PM IST)
-    - cron: "30 12 * * *"
+    # Runs every day at 18:30 UTC = 12:00 AM IST
+    - cron: "30 18 * * *"
 
 jobs:
   tweet_countdown:
@@ -26,4 +26,4 @@ jobs:
           API_SECRET: ${{ secrets.API_SECRET }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
-        run: python main.py
+        run: main.py
